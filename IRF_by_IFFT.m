@@ -9,8 +9,9 @@ clear all
 doplot = true;
 
 %% Define PSD
-df = 0.1;
-f = 0:df:5;
+df= 0.05;
+F = 0.40;
+f = 0:df:F;
 w = 2*pi*f;
 S = 1./(w.^2+1);
 
@@ -20,7 +21,7 @@ S = 1./(w.^2+1);
 A = sqrt(S);
 
 % Mirror amplitude spectrum
-f_ts = 0:df:(10-df);
+f_ts = 0:df:(2*F-df);
 A_ts = S([1:end, end-1:-1:2]);
 
 % Compute zero phase
@@ -31,14 +32,14 @@ X_mp = X_zp.*exp(1i*imag(-hilbert(log(X_zp))));
 
 % Intermediate plots
 if doplot
-    subplot(221); cla; hold on; grid on; ylabel('amplitude')
+    subplot(221); cla; hold on; grid on; ylabel('amplitude /1')
     plot(f_ts,   abs(X_zp), '-rx')
     plot(f_ts,   abs(X_mp), '-k.')
     legend('zero phase', 'minimum phase')
-    subplot(223); cla; hold on; grid on; ylabel('phase')
+    subplot(223); cla; hold on; grid on; ylabel('phase /rad')
     plot(f_ts, angle(X_zp), '-rx')
     plot(f_ts, angle(X_mp), '-k.')
-    xlabel('frequency')
+    xlabel('frequency /Hz')
 end
 
 
@@ -66,6 +67,6 @@ if doplot
     plot(t,   x_zp, '-rx')
     subplot(224); cla; hold on; grid on; ylabel('IRF (minimum phase)')
     plot(t,   x_mp, '-k.')
-    xlabel('time')
+    xlabel('time /s')
 end
 
