@@ -46,5 +46,7 @@ xlabel('distance in m')
 legend filter convolution
 xlim([1000 1200])
 
+annotation('textbox',[0.2 0.1 0.5 0.8],'String',{'Note:','PSD estimation with FFT','only is quite rough.','Use pwelch, if you have it!'},'FitBoxToText','on','BackgroundColor','white');
+annotation('textbox',[0.2 0.1 0.5 0.2],'String',{'Note:','Signals have small','differences due to','quicker implementation.'},'FitBoxToText','on','BackgroundColor','white');
 
 

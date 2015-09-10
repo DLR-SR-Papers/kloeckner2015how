@@ -21,3 +21,13 @@ filter          = dymget(d, 'timeDomainFilter.y');
 convolution     = dymget(d, 'spaceDomainNoiseMinimum.y');
 save SpaceAndTimeDomain time position filter convolution
 
+%% Convert MinimumAndZeroPhase
+file = 'D:/MinimumAndZeroPhase.mat';
+d               = dymload(file);
+time            = dymget(d, 'Time');
+position        = dymget(d, 'position.y');
+zero            = dymget(d, 'spaceDomainNoiseZero.y');
+minimum         = dymget(d, 'spaceDomainNoiseMinimum.y');
+sample          = dymget(d, 'spaceDomainNoiseMinimum.samplePeriod')'*[1 0]';
+save MinimumAndZeroPhase time position zero minimum sample
+
