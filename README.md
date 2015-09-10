@@ -9,8 +9,8 @@ How to Shape Noise Spectra for Continuous System Simulation.
 ## Howto
 1. The conceptual work-flow of our method is illustrated in [IRF_by_IFFT.m](IRF_by_IFFT.m) by reproducing Figure 6 from the paper.
 2. The simulation results can be reprocued using the libraries provided on GitHub:
-   * Download the [AdvancedNoise](https://github.com/DLR-SR/AdvancedNoise) library.
-   * Download the [Modelica_Noise](https://github.com/DLR-SR/Noise) library.
+   * Download the [AdvancedNoise](https://github.com/DLR-SR/AdvancedNoise/releases/tag/v0.9.0) library.
+   * Download the [Modelica_Noise](https://github.com/DLR-SR/Noise/releases/tag/v1.0-beta.1) library.
    * All results can be reproduced by simulating the models in `AdvancedNoise.Examples.RailIrregularities`.
    * For your convenience, the simulation data is provided as .mat files in the [data](data) folder.
 3. Comparisons of the data are available via the following functions:
