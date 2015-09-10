@@ -11,3 +11,13 @@ noise           = dymget(d, 'spaceDomainNoiseWhite.y');
 filter          = dymget(d, 'spaceDomainFilter.y');
 convolution     = dymget(d, 'spaceDomainNoiseMinimum.y');
 save FilterAndConvolution time position noise filter convolution
+
+%% Convert SpaceAndTimeDomain
+file = 'D:/SpaceAndTimeDomain.mat';
+d               = dymload(file);
+time            = dymget(d, 'Time');
+position        = dymget(d, 'position.y');
+filter          = dymget(d, 'timeDomainFilter.y');
+convolution     = dymget(d, 'spaceDomainNoiseMinimum.y');
+save SpaceAndTimeDomain time position filter convolution
+
