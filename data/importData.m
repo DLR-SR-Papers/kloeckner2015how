@@ -31,3 +31,11 @@ minimum         = dymget(d, 'spaceDomainNoiseMinimum.y');
 sample          = dymget(d, 'spaceDomainNoiseMinimum.samplePeriod')'*[1 0]';
 save MinimumAndZeroPhase time position zero minimum sample
 
+%% Convert TrainOnTrack
+file = 'D:/TrainOnTrack.mat';
+d               = dymload(file);
+time            = dymget(d, 'Time');
+position        = dymget(d, 'irregularity.position.y');
+acceleration    = dymget(d, 'accSensor.a');
+save TrainOnTrack time position acceleration
+

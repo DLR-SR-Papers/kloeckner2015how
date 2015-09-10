@@ -28,6 +28,6 @@ loglog([1 1]/sample/2,[1e-16 1e-2], 'g', 'LineWidth', 2);
 box on; grid on
 ylabel('PSD of noise in m^2/(1/m)')
 xlabel('spatial frequency in 1/m')
-legend simulation convolution reference cut-off
+legend zero-phase minimum-phase reference cut-off
 
 h=annotation('textbox',[0.2 0.1 0.5 0.6],'String',{'Note:','In this example, the two','sample periods are equal','for performance reasons.'},'FitBoxToText','on','BackgroundColor','white');
