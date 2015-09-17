@@ -32,5 +32,5 @@ How to Shape Noise Spectra for Continuous System Simulation.
 ```
 
 ## Link to full text PDF
-Will be provided when available
+https://modelica.org/events/modelica2015/proceedings/html/submissions/ecp15118411_KlocknerKnoblachHeckmann.pdf
 
