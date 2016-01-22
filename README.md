@@ -4,7 +4,7 @@
 Andreas Knoblach and 
 Andreas Heckmann.
 How to Shape Noise Spectra for Continuous System Simulation. 
-*11th International Modelica Conference*, **in press**
+*11th International Modelica Conference*, **2015**
 
 ## Howto
 1. The conceptual work-flow of our method is illustrated in [IRF_by_IFFT.m](IRF_by_IFFT.m) by reproducing Figure 6 from the paper.
